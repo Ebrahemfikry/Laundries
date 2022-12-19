@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --green-color: #54b963;
+    --white-color: #fff;
+    --black-color: #19211e;
+    --gray-color: #777;
+    --gray2-color: rgb(251, 249, 249);
+    --transtion: all 1s;
+    --count: 1;
+}
+
+.darktheme {
+    --green-color: #54b963;
+    --white-color: #19211e;
+    --black-color: #fff;
+    --gray-color: #777;
+    --gray2-color: #19211e;
+    --transtion: all 1s;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* start btn scroll ########################### */
+button[type="button"] {
+    outline: none;
+    border: 0;
+    background-color: transparent;
+}
+
+#btn-back-to-top {
+    z-index: 100000;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    outline: none;
+}
+
+#btn-back-to-top i {
+    background-color: var(--green-color);
+    padding: 15px;
+    color: var(--white-color);
+    border-radius: 10px;
+}
+
+/* end btn scroll ########################### */
+
+/* start header ################################## */
+header {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    background: url(../images/inner-banner.jpg) no-repeat center/cover fixed;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 22, 22, 0.564);
+    left: 0;
+    top: 0;
+}
+
+
+/* start nav ################################# */
+header nav {
+    background-color: var(--white-color);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+header nav .container,
+header nav .container .logo,
+header nav .container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* start nav logo ############################## */
+header nav .container .logo a {
+    font-size: 30px;
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+header nav .container .logo a::first-letter {
+    font-size: 35px;
+    color: var(--green-color);
+}
+
+header nav .container .logo i {
+    font-size: 30px;
+    color: var(--green-color);
+}
+
+#mood,
+#mood1 {
+    display: none;
+}
+
+.fa-bars {
+    font-size: 35px;
+    color: var(--black-color);
+    display: none;
+}
+
+/* end nav logo ############################## */
+
+/* start nav ul ############################### */
+header nav .container ul {
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+header nav .container ul li {
+    margin: 0 20px;
+}
+
+header nav .container ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--black-color);
+    transition: var(--transtion);
+}
+
+header nav .container ul li a:hover {
+    color: var(--green-color);
+}
+.offcanvas-body {
+    background-color: var(--white-color)
+}
+.offcanvas-body ul {
+    text-align: center;
+    list-style: none;
+
+}
+
+.offcanvas-body ul li {
+    margin: 30px 0;
+    font-size: 30px;
+}
+
+.offcanvas-body ul li a {
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.offcanvas-body ul li a:hover {
+    color: var(--green-color);
+}
+
+.offcanvas-body ul .links i {
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--green-color);
+    transition: var(--transtion);
+}
+
+.offcanvas-body ul .links i:hover {
+    color: var(--green-color);
+}
+
+.offcanvas-body .offcanvas-title {
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
+
+/* end nav ul ############################### */
+
+/* start nav links ########################### */
+header nav .container .links {
+    margin: 0 0 0 300px
+}
+
+header nav .container .links i {
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--green-color);
+    transition: var(--transtion);
+}
+
+header nav .container .links i:hover {
+    color: var(--green-color);
+}
+
+/* end nav links ########################### */
+/* end nav ################################# */
+
+/* start header content ############################## */
+header .content {
+    text-align: center;
+    padding-top: 12%;
+    position: relative;
+    z-index: 10;
+}
+
+header .content .container h2 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+header .content .container h3 {
+    font-size: 20px;
+    color: #fff;
+}
+
+header .content .container p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+header .content .container a {
+    font-size: 18px;
+    color: #fff;
+    background-color: var(--green-color);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: var(--transtion);
+    outline: none;
+    border: 1px solid transparent;
+}
+
+header .content .container a:hover {
+    background-color: transparent;
+    color: var(--green-color);
+    border: 1px solid var(--green-color);
+}
+@media only screen and (max-width: 600px) {
+    header nav .container ul {
+        display: none;
+    }
+
+    header .content {
+        padding-top: 40%;
+    }
+    .fa-bars {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    header nav .container ul {
+        display: none;
+    }
+
+    header .content {
+        padding-top: 30%;
+    }
+    .fa-bars {
+        display: block;
+    }
+}
+@media only screen and (min-width: 768px) {
+    header nav .container ul {
+        display: flex;
+    }
+
+    header .content {
+        padding-top: 20%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    header nav .container ul {
+        display: flex;
+    }
+
+    header .content {
+        padding-top: 20%;
+    }
+    .fa-bars {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header .content {
+        padding-top: 15%;
+    }
+    .fa-bars {
+        display: none;
+    }
+}
+/* end header content ############################## */
+/* end header ################################## */
+
+
+/* start Services ###################### */
+.Services {
+    padding: 70px 0;
+    background-color: var(--gray2-color);
+    text-align: center;
+}
+
+.Services span {
+    color: var(--green-color);
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.Services span::first-letter {
+    border-bottom: 2px solid var(--green-color);
+}
+
+.Services h2 {
+    color: var(--black-color);
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.Services .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.Services .container .box {
+    margin: 20px 0;
+    width: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.Services .container .box img {
+    width: 100%;
+    transition: var(--transtion);
+}
+
+.Services .container .box:hover img {
+    transform: scale(1.1);
+}
+
+.Services .container .box .content {
+    padding: 30px 20px;
+    background-color: var(--white-color);
+}
+
+.Services .container .box .content h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--black-color);
+}
+
+.Services .container .box .content p {
+    font-size: 18px;
+    color: var(--gray-color);
+    margin-bottom: 30px;
+}
+
+.Services .container .box .content a {
+    font-size: 18px;
+    color: var(--white-color);
+    background-color: var(--green-color);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: var(--transtion);
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.Services .container .box .content a:hover {
+    background-color: transparent;
+    color: var(--green-color);
+    border: 1px solid var(--green-color);
+}
+
+@media only screen and (max-width: 600px) {
+    .Services .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .Services .container .box {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .Services .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .Services .container .box {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .Services .container {
+        flex-direction: row;
+    }
+
+    .Services .container .box {
+        width: 32%;
+    }
+}
+/* end Services ###################### */
+/* start Works ###################### */
+.Works {
+    padding: 70px 0;
+    background-color: var(--gray2-color);
+    text-align: center;
+}
+
+.Works span {
+    color: var(--green-color);
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.Works span::first-letter {
+    border-bottom: 2px solid var(--green-color);
+}
+
+.Works h2 {
+    color: var(--black-color);
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.Works .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Works .container .box {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.Works .container .box i {
+    font-size: 30px;
+    background-color: #ececec;
+    padding: 30px;
+    border-radius: 50%;
+    color: var(--green-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.Works .container .box h4 {
+    position: absolute;
+    background-color: var(--black-color);
+    padding: 5px 10px;
+    border-radius: 50%;
+    top: 0px;
+    right: 110px;
+    display: block;
+    margin-bottom: 0px;
+    color: var(--white-color);
+}
+
+.Works .container .box h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Works .container .box p {
+    font-size: 18px;
+    color: var(--gray-color);
+    margin-bottom: 40px;
+}
+
+.Works a {
+    font-size: 18px;
+    color: var(--white-color);
+    background-color: var(--green-color);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: var(--transtion);
+    outline: none;
+    border: 1px solid transparent;
+}
+
+.Works a:hover {
+    background-color: transparent;
+    color: var(--green-color);
+    border: 1px solid var(--green-color);
+}
+@media only screen and (max-width: 600px) {
+    .Works .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .Works .container .box {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .Works .container .box {
+        width: 100%;
+    }
+
+    .Works .container .box h4 {
+        right: 140px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .Works .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .Works .container .box {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .Works .container .box {
+        width: 100%;
+    }
+
+    .Works .container .box h4 {
+        right: 220px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .Works .container .box h4 {
+        right: 300px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .Works .container {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .Works .container .box {
+        width: 32%;
+        margin: 20px;
+    }
+
+    .Works .container .box {
+        width: 100%;
+    }
+
+    .Works .container .box h4 {
+        right: 110px;
+    }
+}
+/* end Services ###################### */
+
+
+
+
+
+/* start footer ####################### */
+footer {
+    padding: 70px 0 20px;
+    background-color: #19211e;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .container .box {
+    width: 350px;
+    color: #fff;
+}
+
+footer .container .box h2::first-letter {
+    font-size: 35px;
+    color: var(--green-color);
+}
+
+footer .container .box p,
+footer .container .box ul li {
+    margin-top: 20px;
+    color: var(--gray-color);
+}
+
+footer .container .box p:hover,
+footer .container .box ul li:hover {
+    color: var(--green-color);
+}
+
+footer .end {
+    margin-top: 70px;
+    color: var(--gray-color);
+}
+
+@media only screen and (max-width: 600px) {
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container .box {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container .box {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .container .box {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    footer .container {
+        flex-direction: row;
+    }
+
+    footer .container .box {
+        width: 350px;
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    footer .container {
+        flex-direction: row;
+    }
+
+    footer .container .box {
+        width: 350px;
+        margin-bottom: 0px;
+    }
+}
+
+/* end footer ####################### */
